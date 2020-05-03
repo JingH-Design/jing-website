@@ -7,8 +7,122 @@ title: Jing
   <head>
     <meta charset="utf-8" />
     <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
-  <body>
-    <h1>{{ "Hello World!" | downcase }}</h1>
+  <body class="bg-white font-sourcesanspro-light text-gray-600">
+    <header class="shadow-sm pt-10 pb-8">
+      <div class="flex max-w-screen-xl m-auto">
+        <div class="w-1/2">
+          <a href="/" class="logo block bg-no-repeat bg-cover"></a>
+        </div>
+        <nav class="w-1/2 flex justify-between font-merriweather-regular">
+          {% for item in site.data.navigation %}
+            <a href="{{ item.link }}"
+            {% if page.url == item.link %}
+              class="text-lg text-primary border-b-2 border-secondary pb-1"
+            {% else %}
+              class="text-lg text-gray-700 hover:text-tertiary"
+            {% endif %}>
+              {{ item.name }}
+            </a>
+          {% endfor %}
+        </nav>
+      </div>
+    </header>
+    <section class="max-w-screen-xl m-auto overflow-x-hidden">
+      <article>
+        <section class="grid grid-cols-12 pt-10">
+          <div class="col-span-7">
+            <h1 class="inline-flex flex-col">
+              <span class="self-start">I turn problems into</span>
+              <span class="text-secondary typewriter self-start pb-1">intuitive experience</span>
+            </h1>
+            <p class="mt-5 max-w-5/7">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <div class="mt-8">
+              <a href="/get-in-touch" class="text-secondary text-lg no-underline link-highlighted">Get in touch<i class="arrow-right inline-block ml-2 align-middle"></i></a>
+              <div class="mt-5">
+                {% for item in site.data.social %}
+                  <a href="{{ item.link }}" class="{{ item.icon }} inline-block mr-4 last:mr-0"></a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          <ul class="col-span-5 grid intro-images-layout overlapping">
+            <li class="z-10">
+              <img
+                src="./assets/images/hero-jing@3x.jpg"
+                alt="Jing is walking toward zoo"
+              />
+            </li>
+            <li class="z-20">
+              <img
+                src="./assets/images/hero-wellignton@3x.jpg"
+                alt="Wellington cabel car is climbing"
+              />
+            </li>
+          </ul>
+        </section>
+        <section class="grid grid-cols-12 pt-5">
+          <section class="col-span-7">
+            <h2>The way I work</h2>
+            <p class="mt-5 max-w-5/7">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <a href="/work-together" class="inline-block mt-5 text-secondary no-underline link-highlighted">Want to work together?</a>
+          </section>
+          <section class="col-span-5">
+            <h3>My areas</h3>
+            <ul class="mt-5 font-sourcesanspro-semibold">
+              <li class="text-2xl">UX design</li>
+              <li class="text-2xl">UI design</li>
+              <li class="text-2xl">User testing</li>
+            </ul>
+          </section>
+        </section>
+      </article>
+      <article class="mt-24">
+        <h2>Thoughts</h2>
+        <ul class="mt-6 flex">
+          {% for post in site.posts %}
+            <li class="mr-8 last:mr-0 border-solid border border-gray-100 hover:shadow-light">
+              <img src="./assets/images/hero-jing@3x.jpg"/>
+              <div class="p-4">
+                <p><time datetime="2020-04-04">2020-04-04</time></p>
+                <h3 class="mt-3">HELLO FIRST POST IS HERE NOW</h3>
+                <p class="mt-2">Whatever Whatever Whatever Whatever Whatever</p>
+                <a href="/" class="inline-block mt-12 text-secondary no-underline link-highlighted">Read</a>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </article>
+    </section>
+    <footer class="pt-10 pb-16 text-center">
+      <h2>Contact me</h2>
+      <p>Always open to connect with people</p>
+      <p>Drop me an email on <a href="mailto:jinghu219@gmail.com" class="text-secondary no-underline link-highlighted">jinghu219@gmail.com</a></p>
+      <div class="mt-5">
+        Find me on
+        <div class="mt-3">
+          {% for item in site.data.social %}
+            <a href="{{ item.link }}" class="{{ item.icon }} inline-block ml-2 mr-2"></a>
+          {% endfor %}
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

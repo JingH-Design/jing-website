@@ -1,0 +1,8 @@
+- name: Home
+  link: /
+- name: Thoughts
+  link: /thoughs.html
+- name: Works
+  link: /works
+- name: Get in touch
+  link: /get-in-touch

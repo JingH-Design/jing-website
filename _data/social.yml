@@ -1,0 +1,9 @@
+- name: LinkedIn
+  icon: icon-linkedin
+  link: /
+- name: Medium
+  icon: icon-medium
+  link: /
+- name: Dribbble
+  icon: icon-dribbble
+  link: /
