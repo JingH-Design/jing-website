@@ -10,25 +10,7 @@ title: Jing
     <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
   <body class="bg-white font-sourcesanspro-light text-gray-600">
-    <header class="shadow-sm pt-10 pb-8">
-      <div class="flex max-w-screen-xl m-auto">
-        <div class="w-1/2">
-          <a href="/" class="logo block bg-no-repeat bg-cover"></a>
-        </div>
-        <nav class="w-1/2 flex justify-between font-merriweather-regular">
-          {% for item in site.data.navigation %}
-            <a href="{{ item.link }}"
-            {% if page.url == item.link %}
-              class="text-lg text-primary border-b-2 border-secondary pb-1"
-            {% else %}
-              class="text-lg text-gray-700 hover:text-tertiary"
-            {% endif %}>
-              {{ item.name }}
-            </a>
-          {% endfor %}
-        </nav>
-      </div>
-    </header>
+    {% include header.html %}
     <section class="max-w-screen-xl m-auto overflow-x-hidden">
       <article>
         <section class="grid grid-cols-12 pt-10">
@@ -111,18 +93,6 @@ title: Jing
         </ul>
       </article>
     </section>
-    <footer class="pt-10 pb-16 text-center">
-      <h2>Contact me</h2>
-      <p>Always open to connect with people</p>
-      <p>Drop me an email on <a href="mailto:jinghu219@gmail.com" class="text-secondary no-underline link-highlighted">jinghu219@gmail.com</a></p>
-      <div class="mt-5">
-        Find me on
-        <div class="mt-3">
-          {% for item in site.data.social %}
-            <a href="{{ item.link }}" class="{{ item.icon }} inline-block ml-2 mr-2"></a>
-          {% endfor %}
-        </div>
-      </div>
-    </footer>
+    {% include footer.html %}
   </body>
 </html>

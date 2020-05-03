@@ -1,0 +1,19 @@
+<header class="shadow-sm pt-10 pb-8">
+  <div class="flex max-w-screen-xl m-auto">
+    <div class="w-1/2">
+      <a href="/" class="logo block bg-no-repeat bg-cover"></a>
+    </div>
+    <nav class="w-1/2 flex justify-between font-merriweather-regular">
+      {% for item in site.data.navigation %}
+        <a href="{{ item.link }}"
+        {% if page.url == item.link %}
+          class="text-lg text-primary border-b-2 border-secondary pb-1"
+        {% else %}
+          class="text-lg text-gray-700 hover:text-tertiary"
+        {% endif %}>
+          {{ item.name }}
+        </a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

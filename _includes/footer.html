@@ -1,0 +1,13 @@
+<footer class="pt-10 pb-16 text-center">
+  <h2>Contact me</h2>
+  <p>Always open to connect with people</p>
+  <p>Drop me an email on <a href="mailto:jinghu219@gmail.com" class="text-secondary no-underline link-highlighted">jinghu219@gmail.com</a></p>
+  <div class="mt-5">
+    Find me on
+    <div class="mt-3">
+      {% for item in site.data.social %}
+        <a href="{{ item.link }}" class="{{ item.icon }} inline-block ml-2 mr-2"></a>
+      {% endfor %}
+    </div>
+  </div>
+</footer>
