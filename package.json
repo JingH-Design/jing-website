@@ -7,7 +7,7 @@
     "clean": "rm -rf ./_site/* ./assets/css/*",
     "build:css": "tailwindcss build ./tailwind/styles.css -c ./tailwind/config.js -o ./assets/css/styles.css",
     "prestart": "run-s clean build:css",
-    "start:jekyll": "jekyll serve -l -P 4001",
+    "start:jekyll": "bundle exec jekyll serve -l -P 4001",
     "start": "run-p start:jekyll watch:css",
     "watch:css": "onchange './tailwind/*' -- npm run build:css"
   },
