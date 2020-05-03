@@ -9,7 +9,7 @@ title: Jing
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
-  <body class="bg-white text-lg font-sourcesanspro-regular text-gray-500">
+  <body class="bg-white text-xl font-sourcesanspro-regular text-gray-700">
     {% include header.html %}
     <section class="max-w-screen-xl m-auto overflow-x-hidden">
       <article>
@@ -20,14 +20,14 @@ title: Jing
               <span class="text-secondary typewriter self-start pb-1">intuitive experience</span>
             </h1>
             <p class="mt-5 max-w-5/7">
-              Hello, I am Jing, a UX/UI designer based in Wellington, New Zealand. I am orignally from China.
+              Hello, I am Jing, a UX/UI designer orignally from China and now living in Wellingon, New Zealand.
               I’ve been practising UX/UI design for about 10 years and am passionate about solving problem with my design-thinking skills.
             </p>
             <div class="mt-8">
-              <a href="/get-in-touch" class="text-secondary text-lg no-underline link-highlighted">Get in touch<i class="arrow-right inline-block ml-2 align-middle"></i></a>
+              <a href="/get-in-touch" class="text-secondary text-xl no-underline link-highlighted">Get in touch<i class="arrow-right inline-block ml-2 align-middle"></i></a>
               <div class="mt-5">
                 {% for item in site.data.social %}
-                  <a href="{{ item.link }}" class="{{ item.icon }} inline-block mr-4 last:mr-0"></a>
+                  <a href="{{ item.link }}" target="_blank" class="{{ item.icon }} inline-block mr-4 last:mr-0"></a>
                 {% endfor %}
               </div>
             </div>
@@ -63,10 +63,11 @@ title: Jing
           </section>
           <section class="col-span-5">
             <h3>My areas</h3>
-            <ul class="mt-5 font-sourcesanspro-semibold">
-              <li class="text-2xl">UX design</li>
-              <li class="text-2xl">UI design</li>
+            <ul class="mt-5 font-sourcesanspro-regular">
+              <li class="text-2xl">UX design/UI design</li>
+              <li class="text-2xl">Interaction design</li>
               <li class="text-2xl">User testing</li>
+              <li class="text-2xl">Wirefame and prototyping</li>
             </ul>
           </section>
         </section>
