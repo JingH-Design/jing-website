@@ -129,3 +129,7 @@ a.link-highlighted:hover {
   from, to { border-right-color: transparent }
   50% { border-right-color: theme('colors.primary'); }
 }
+
+header nav > a:last-child {
+  margin-right: 0;
+}
