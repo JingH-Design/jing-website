@@ -9,7 +9,7 @@ title: Jing
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
-  <body class="bg-white text-xl font-sourcesanspro-regular text-gray-700">
+  <body class="bg-white text-xl font-sourcesanspro-regular text-gray-600">
     {% include header.html %}
     <section class="max-w-screen-xl m-auto overflow-x-hidden">
       <article>
@@ -20,11 +20,14 @@ title: Jing
               <span class="text-secondary typewriter self-start pb-1">intuitive experience</span>
             </h1>
             <p class="mt-5 max-w-5/7">
-              Hello, I am Jing, a UX/UI designer orignally from China and now living in Wellingon, New Zealand.
+              Hello, I am Jing, a UX/UI designer originally from China and now living in Wellington, New Zealand.
               I’ve been practising UX/UI design for about 10 years and am passionate about solving problem with my design-thinking skills.
             </p>
             <div class="mt-8">
-              <a href="/get-in-touch" class="text-secondary text-xl no-underline link-highlighted">Get in touch<i class="arrow-right inline-block ml-2 align-middle"></i></a>
+              <a href="/get-in-touch" class="text-secondary text-xl no-underline link-highlighted">
+                Get in touch
+                <i class="arrow-right inline-block ml-2 align-middle"></i>
+              </a>
               <div class="mt-5">
                 {% for item in site.data.social %}
                   <a href="{{ item.link }}" target="_blank" class="{{ item.icon }} inline-block mr-4 last:mr-0"></a>
@@ -42,22 +45,31 @@ title: Jing
             <li class="z-20">
               <img
                 src="./assets/images/hero-wellignton@3x.jpg"
-                alt="Wellington cabel car is climbing"
+                alt="Wellington cable car is climbing"
               />
             </li>
           </ul>
         </section>
         <section class="grid grid-cols-12 pt-5">
           <section class="col-span-7">
-            <h2>The way I work</h2>
+            <h2>How I work</h2>
             <p class="mt-5 max-w-5/7">
-              I believe that design is not just making something beautiful or even easy-to-use. It should help business achieve its goal by understainding the users.
-              Here is how I put my belief into practise:
-              1. Understand the business goal. I always ask questions to find out the root problem that a business wants to solve before jumping into the solution. This step is always the key.
-              2. Validate hypthesis through various user research activiites. What a business think a problem might be is open not aligned to what the users want.
-              3. Brainstorm and evaluate solutions. I like involving people who think differently to brainstorm soltions
-              4. Make the solution pretty and easy to use. As you can see here, The perception that most of  people have is actually a step near the end.
-              5. Track the performace of the solution and keep iterate.
+              I believe that design is not just making something beautiful or even easy-to-use.
+              It should help business achieve its goal by understanding the users.
+            </p>
+            <p class="mt-5 max-w-5/7">
+              Here is how I put my belief into practice: <br>
+              1. <strong>Understand the business goal.</strong>
+              I always ask questions to find out the root problem that a business wants to solve
+              before jumping into the solution.
+              This step is always the key. <br>
+              2. <strong>Validate hypothesis through various user research activities.</strong>
+              What a business think a problem might be is open not aligned to what the users want. <br>
+              3. <strong>Brainstorm and evaluate solutions.</strong>
+              I like involving people who think differently to brainstorm solutions <br>
+              4. <strong>Make the solution pretty and easy to use.</strong>
+              As you can see here, The perception that most of people have is actually a step near the end. <br>
+              5. <strong>Track the performance of the solution and keep iterate.</strong>
             </p>
             <a href="/work-together" class="inline-block mt-5 text-secondary no-underline link-highlighted">Want to work together?</a>
           </section>
@@ -67,7 +79,7 @@ title: Jing
               <li class="text-2xl">UX design/UI design</li>
               <li class="text-2xl">Interaction design</li>
               <li class="text-2xl">User testing</li>
-              <li class="text-2xl">Wirefame and prototyping</li>
+              <li class="text-2xl">Wire-frame and prototyping</li>
             </ul>
           </section>
         </section>
@@ -75,7 +87,7 @@ title: Jing
       <article class="mt-24">
         <h2>Thoughts</h2>
         <ul class="mt-6 flex">
-          {% for post in site.posts %}
+          {% for post in site.posts limit:3 %}
             <li class="mr-8 last:mr-0 border-solid border border-gray-100 hover:shadow-light w-1/3">
               <img class="object-cover" src="{{ post.thumbnail }}" alt="{{ post.thumbnail-alt }}"/>
               <div class="p-4">

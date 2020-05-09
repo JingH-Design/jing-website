@@ -46,6 +46,10 @@ h3 {
   color: theme('colors.primary');
 }
 
+strong {
+  color: theme('colors.primary');
+}
+
 @tailwind components;
 
 @tailwind utilities;
