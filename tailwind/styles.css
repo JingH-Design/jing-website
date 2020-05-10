@@ -182,3 +182,7 @@ header nav > a:last-child {
     grid-column: 3 / 4;
   }
 }
+
+ul.posts-list li:last-child {
+  margin-right: 0;
+}
