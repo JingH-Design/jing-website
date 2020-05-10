@@ -168,3 +168,15 @@ a.link-highlighted:hover {
 header nav > a:last-child {
   margin-right: 0;
 }
+
+.how-i-work-layout {
+  grid-template-columns: 7fr 1fr 4fr;
+}
+
+.how-i-work-section1 {
+  grid-column: 1 / 2;
+}
+
+.how-i-work-section2 {
+  grid-column: 3 / 4;
+}
