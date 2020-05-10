@@ -26,6 +26,9 @@ module.exports = {
         '5/7': '71.4%',
         '3/4': '75%',
       },
+      spacing: {
+        '14': '3.5rem',
+      },
       fontFamily: {
         'merriweather-bold': 'Merriweather-Bold, Cambria, "Times New Roman", Times, serif',
         'merriweather-regular': 'Merriweather-Regular, Cambria, "Times New Roman", Times, serif',

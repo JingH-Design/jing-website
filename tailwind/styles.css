@@ -27,23 +27,40 @@
 
 h1 {
   font-family: theme('fontFamily.merriweather-bold');
-  font-size: 3.5rem;
-  line-height: 1.1428;
+  font-size: 2rem;
+  line-height: 1.25;
   color: theme('colors.primary');
 }
 
 h2 {
   font-family: theme('fontFamily.merriweather-bold');
-  @apply text-4xl;
-  line-height: 1.1111;
+  @apply text-2xl;
+  line-height: 1.67;
   color: theme('colors.primary');
 }
 
 h3 {
   font-family: theme('fontFamily.merriweather-bold');
-  @apply text-2xl;
-  line-height: 1.3333;
+  @apply text-xl;
+  line-height: 1.6;
   color: theme('colors.primary');
+}
+
+@media (min-width: theme('screens.lg')) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.1428;
+  }
+
+  h2 {
+    @apply text-4xl;
+    line-height: 1.1111;
+  }
+
+  h3 {
+    @apply text-2xl;
+    line-height: 1.3333;
+  }
 }
 
 strong {
