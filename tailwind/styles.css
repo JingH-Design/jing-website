@@ -211,14 +211,19 @@ ul.posts-list::-webkit-scrollbar {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23011E35' fill-rule='evenodd' d='M13.242 12.018l6.555-6.683c.282-.308.269-.784-.029-1.076-.298-.292-.774-.296-1.076-.008l-6.544 6.673L5.335 4.24c-.195-.204-.486-.287-.76-.214-.273.073-.485.289-.553.563-.067.275.02.565.23.756l6.801 6.673-6.802 6.674c-.288.302-.284.778.008 1.076.292.298.768.31 1.076.028l6.813-6.683 6.544 6.673c.302.288.778.284 1.076-.008.298-.292.31-.768.029-1.076l-6.555-6.684z'/%3E%3C/svg%3E%0A");
 }
 
-#menu-switch:checked ~ .page-header .nav-menu {
-  display: flex;
-}
+@media (max-width: theme('screens.md')) {
+  .nav-menu {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s ease-out;
+  }
 
-#menu-switch:checked ~ .page-header .contact-me {
-  display: block;
-}
+  #menu-switch:checked ~ .page-header .nav-menu {
+    height: 500px;
+    transition: height 0.3s ease-in;
+  }
 
-#menu-switch:checked ~ *:not(.page-header) {
-  display: none;
+  #menu-switch:checked ~ *:not(.page-header) {
+    display: none;
+  }
 }

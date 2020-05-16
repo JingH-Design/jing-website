@@ -2,19 +2,21 @@
 <header class="page-header flex justify-between flex-wrap max-w-screen-xl m-auto shadow-sm pt-10 pb-8 pl-3 pr-3 sm:pl-14 sm:pr-14 xl:pl-20 xl:pr-20">
   <a href="/" class="logo block bg-no-repeat bg-cover"></a>
   <label for="menu-switch" class="md:hidden menu-icon cursor-pointer"></label>
-  <nav class="nav-menu hidden flex-col items-center w-full md:w-auto md:block font-merriweather-regular mt-12 md:mt-0">
-    {% for item in site.data.navigation %}
-      <a href="{{ item.link }}"
-      {% if page.url == item.link %}
-        class="text-lg text-primary border-b-2 border-secondary pb-1 lg:mr-20 md:mr-16 sm:mr-8 mt-6 md:mt-0"
-      {% else %}
-        class="text-lg text-gray-800 hover:text-tertiary lg:mr-20 md:mr-16 sm:mr-12 mt-6"
-      {% endif %}>
-        {{ item.name }}
-      </a>
-    {% endfor %}
-  </nav>
-  <div class="hidden contact-me text-center m-auto mt-20">
-    {% include contact.html %}
+  <div class="nav-menu w-full md:w-auto mt-12 md:mt-0">
+    <nav class="flex flex-col items-center md:block font-merriweather-regular">
+      {% for item in site.data.navigation %}
+        <a href="{{ item.link }}"
+        {% if page.url == item.link %}
+          class="text-lg text-primary border-b-2 border-secondary pb-1 md:mr-16 lg:mr-20 mt-6 md:mt-0"
+        {% else %}
+          class="text-lg text-gray-800 hover:text-tertiary md:mr-16 lg:mr-20 mt-6"
+        {% endif %}>
+          {{ item.name }}
+        </a>
+      {% endfor %}
+    </nav>
+    <div class="md:hidden contact-me text-center m-auto mt-20">
+      {% include contact.html %}
+    </div>
   </div>
 </header>
