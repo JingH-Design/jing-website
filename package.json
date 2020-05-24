@@ -9,7 +9,9 @@
     "prestart": "run-s clean build:css",
     "start:jekyll": "bundle exec jekyll serve -l -P 4001",
     "start": "run-p start:jekyll watch:css",
-    "watch:css": "onchange './tailwind/*' -- npm run build:css"
+    "watch:css": "onchange './tailwind/*' -- npm run build:css",
+    "prebuild": "run-s clean build:css",
+    "build": "bundle exec jekyll build"
   },
   "author": "",
   "license": "ISC",
