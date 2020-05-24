@@ -1,0 +1,28 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UseRubyVersion@0
+  inputs:
+    versionSpec: '>= 2.4'
+  displayName: 'Install Ruby'
+- task: CmdLine@2
+  inputs:
+    script: 'gem install jekyll bundler'
+  displayName: 'Install Jekyll and bundler'
+- task: CmdLine@2
+  inputs:
+    script: 'bundle install'
+  displayName: 'Install Gems'
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+  
+- script: |
+    npm install
+    npm run build
+  displayName: 'npm install and build'
