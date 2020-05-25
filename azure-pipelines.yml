@@ -25,3 +25,16 @@ steps:
   inputs:
     script: 'npm install && npm run build'
   displayName: 'npm install and build'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '_site'
+    Contents: '**'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+    CleanTargetFolder: true
+  displayName: 'Copy build artifacts'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: '_site'
+    publishLocation: 'Container'
+  displayName: 'Publish build artifacts'
