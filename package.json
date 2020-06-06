@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf ./_site/* ./assets/css/*",
-    "build:css": "tailwindcss build ./tailwind/styles.css -c ./tailwind/config.js -o ./assets/css/styles.css",
+    "clean": "rm -rf ./_site/*",
+    "build:css": "tailwindcss build ./tailwind/styles.css -c ./tailwind/config.js -o ./_sass/tailwind.scss",
     "prestart": "run-s clean build:css",
     "start:jekyll": "bundle exec jekyll serve -l -P 4001",
     "start": "run-p start:jekyll watch:css",

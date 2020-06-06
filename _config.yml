@@ -48,3 +48,6 @@ exclude:
   - README.md
   - yarn.lock
   - azure-pipelines.yml
+
+sass:
+  sass_dir: _sass
